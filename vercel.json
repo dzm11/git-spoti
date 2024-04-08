@@ -11,11 +11,15 @@
       },
       {
         "src": "/api/current-track",
-        "dest": "/public/index.html"
+        "dest": "/index.js"
       },
       {
         "src": "/(.*)",
         "dest": "/index.js"
+      },
+      {
+        "src": "/public/(.*)",
+        "dest": "/public/$1"
       }
     ]
   }
