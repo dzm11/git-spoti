@@ -1,6 +1,6 @@
 async function getCurrentTrack() {
   try {
-    const response = await fetch('/current-track');
+    const response = await fetch('/api/current-track');
 
     // Sprawdzenie, czy odpowiedź jest poprawna (status 200)
     if (!response.ok) {

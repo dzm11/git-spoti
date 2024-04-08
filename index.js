@@ -63,7 +63,7 @@ app.get('/callback', async (req, res) => {
   }
 });
 
-app.get('/current-track', async (req, res) => {
+app.get('/api/current-track', async (req, res) => {
   try {
     await refreshTokens();
     const data = await spotifyApi.getMyCurrentPlayingTrack();
