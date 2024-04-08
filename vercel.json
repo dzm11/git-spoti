@@ -11,7 +11,7 @@
       },
       {
         "src": "/api/current-track",
-        "dest": "/public/script.js"
+        "dest": "/public/index.html"
       },
       {
         "src": "/(.*)",
