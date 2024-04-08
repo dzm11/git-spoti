@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const path = require('path');
 const SpotifyWebApi = require('spotify-web-api-node');
 const dotenv = require('dotenv');
@@ -7,7 +8,12 @@ const axios = require('axios');
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
+
+// Dodaj middleware cors
+app.use(cors());
+
+// Twoje pozostałe konfiguracje i trasy...
 
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
@@ -79,7 +85,7 @@ app.get('/current-track', async (req, res) => {
 
 // Start server
 app.listen(port, () => {
-  console.log(`Serwer uruchomiony na porcie 3001`);
+  console.log(`Serwer uruchomiony na porcie 3000`);
 });
 
 
